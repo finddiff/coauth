@@ -4,13 +4,13 @@ from queue import Empty
 
 def add(q, index,Q):
     r = 0
-    while not q.empty():
+    while 1:
         try:
             args = q.get(block=False)
             #Q.put(args[0])
         except Empty:
             print(f'{index}_Empty')
-            pass
+            break
         except:
             print('else')
     print(f'{index}_QueueIsEmpty')
